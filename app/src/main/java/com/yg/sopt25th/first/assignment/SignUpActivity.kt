@@ -15,8 +15,9 @@ class SignUpActivity : AppCompatActivity() {
             val intent = Intent(this, SignActivity::class.java)
             intent.putExtra("id", signInEdtId.text.toString())
             intent.putExtra("pwd", signInEdtPwd.text.toString())
-            setResult(2000, intent)
+            setResult(1200, intent)
             finish()
+
         }
     }
 }

@@ -39,6 +39,7 @@ class SignActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+        Log.v("result", resultCode.toString())
         if(requestCode == 2000){
             Log.v("eee","eeee")
             val id = data?.getStringExtra("id")
