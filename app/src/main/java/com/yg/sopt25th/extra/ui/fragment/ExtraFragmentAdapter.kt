@@ -3,6 +3,7 @@ package com.yg.sopt25th.extra.ui.fragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
+import androidx.viewpager.widget.PagerAdapter
 
 class ExtraFragmentAdapter(fm : FragmentManager) : FragmentStatePagerAdapter(fm) {
 
@@ -13,5 +14,14 @@ class ExtraFragmentAdapter(fm : FragmentManager) : FragmentStatePagerAdapter(fm)
 
     fun addFragments(fragment : Fragment){
         fragments.add(fragment)
+    }
+
+    fun replaceFragment(index : Int, fragment2 : Fragment){
+        fragments.removeAt(index)
+        fragments.add(index, fragment2)
+    }
+
+    override fun getItemPosition(item: Any): Int {
+        return PagerAdapter.POSITION_NONE
     }
 }

@@ -16,6 +16,12 @@ class ExtraSecondAdapter(private val datas : List<ExtraSecondData>, val context 
     override fun getItemCount(): Int = datas.size
 
     override fun onBindViewHolder(holder: ExtraSecondViewHolder, position: Int) {
-        holder.bind(datas[position], context)
+//        holder.bind(datas[position], context)
+        if(position == 0){
+
+        }else{
+
+        }
+
     }
 }
