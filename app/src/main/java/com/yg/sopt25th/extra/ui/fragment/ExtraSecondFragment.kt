@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.yg.first.R
+import com.yg.sopt25th.extra.ui.activity.ExtraSecondActivity
 import kotlinx.android.synthetic.main.fragment_extra_second.*
 
 class ExtraSecondFragment : Fragment() {
@@ -22,11 +23,17 @@ class ExtraSecondFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_extra_second, container, false)
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
+
     override fun onStart() {
         super.onStart()
         frg_tv_second.setOnClickListener {
             Toast.makeText(context, "2번입니다", Toast.LENGTH_SHORT).show()
+            (activity as ExtraSecondActivity).refresh()
         }
-    }
 
+    }
 }

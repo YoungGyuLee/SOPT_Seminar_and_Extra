@@ -20,4 +20,14 @@
         android:layout_centerInParent="true"
         android:text="첫 번째" />
 
+    <Button
+        android:id="@+id/first_test_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#232323"
+        android:layout_centerInParent="true"
+        >
+
+    </Button>
+
 </RelativeLayout>

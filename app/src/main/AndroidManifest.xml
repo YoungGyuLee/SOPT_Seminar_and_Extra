@@ -3,7 +3,7 @@
     package="com.yg.first">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name="com.yg.sopt25th.Example1"
@@ -12,11 +12,22 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/AppTheme">
-        <activity android:name="com.yg.sopt25th.extra.ui.activity.ExtraThirdActivity">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.yg.sopt25th.appjam.early.adapter.EarlySecondActivity"
+            android:theme="@style/AppTheme2"></activity>
+        <activity android:name="com.yg.sopt25th.appjam.early.EarlyActivity" />
+        <activity android:name="com.yg.sopt25th.appjam.excuse.ExcuseActivity" />
+        <activity android:name="com.yg.sopt25th.appjam.chat.ChatMainActivity" />
+        <activity android:name="com.yg.sopt25th.appjam.chat.FireBaseActivity" />
+        <activity android:name="com.yg.sopt25th.appjam.AppJamActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity android:name="com.yg.sopt25th.extra.ui.activity.ExtraThirdActivity" />
         <activity
             android:name="com.yg.sopt25th.extra.ui.activity.ExtraSecondActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -31,19 +42,8 @@
         <activity android:name="com.yg.sopt25th.first.seminar.login.MainActivity" />
         <activity
             android:name="com.yg.sopt25th.extra.ui.activity.ExtraActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-        </activity>
-
-        <activity android:name="com.yg.sopt25th.first.assignment.SignActivity"
-
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name="com.yg.sopt25th.first.assignment.SignActivity" />
     </application>
 
 </manifest>
