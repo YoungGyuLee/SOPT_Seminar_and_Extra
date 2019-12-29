@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.yg.first.R
-import com.yg.sopt25th.appjam.chat.ChatMainActivity
+import com.yg.sopt25th.appjam.tokddak.TokActivity
 import kotlinx.android.synthetic.main.activity_app_jam.*
 
 class AppJamActivity : AppCompatActivity() {
@@ -17,7 +17,9 @@ class AppJamActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_app_jam)
 
-        startActivity(Intent(this, ChatMainActivity::class.java))
+
+
+        startActivity(Intent(this, TokActivity::class.java))
 
 //        temp_view1.setOnClickListener {
 //            temp_view1.getToast()

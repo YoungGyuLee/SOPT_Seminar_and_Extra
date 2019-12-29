@@ -47,11 +47,11 @@ class FireBaseActivity : AppCompatActivity() {
     }
 
     fun addMessage(dataSnapshot: DataSnapshot){
-//        val chatData = dataSnapshot.getValue<ChatData>(ChatData::class.java)
-//
-//        chatList.add(ChatData(chatData!!.userName, chatData.message))
-//        chatAdapter = ChatAdapter(chatList)
-//        chat_view.adapter = chatAdapter
+        val chatData = dataSnapshot.getValue<ChatData>(ChatData::class.java)
+
+        chatList.add(ChatData(chatData!!.userName, chatData.message))
+        chatAdapter = ChatAdapter(chatList)
+        chat_view.adapter = chatAdapter
 
     }
 

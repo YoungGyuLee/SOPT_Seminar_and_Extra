@@ -14,8 +14,33 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.yg.sopt25th.appjam.early.adapter.EarlySecondActivity"
-            android:theme="@style/AppTheme2"></activity>
+        <activity android:name="com.yg.sopt25th.appjam.tokddak.TokActivity"></activity>
+        <activity android:name="com.yg.sopt25th.appjam.flood.FloodActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yg.sopt25th.appjam.early.adapter.EarlySecondActivity"
+            android:theme="@style/AppTheme2" />
         <activity android:name="com.yg.sopt25th.appjam.early.EarlyActivity" />
         <activity android:name="com.yg.sopt25th.appjam.excuse.ExcuseActivity" />
         <activity android:name="com.yg.sopt25th.appjam.chat.ChatMainActivity" />
