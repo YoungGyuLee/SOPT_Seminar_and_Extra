@@ -13,6 +13,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
 import com.yg.first.R
 import com.yg.sopt25th.appjam.adpater.MainAdapter
+import com.yg.sopt25th.appjam.flood.myWatcher
+import com.yg.sopt25th.appjam.flood.printAll
+import com.yg.sopt25th.appjam.flood.toast
 import kotlinx.android.synthetic.main.activity_chat_main.*
 
 class ChatMainActivity : AppCompatActivity(), View.OnClickListener {
@@ -28,6 +31,38 @@ class ChatMainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat_main)
+
+
+        mainList.add("피카츄")
+        mainList.add("라이츄")
+        mainList.add("파이리")
+        mainList.add("꼬부기")
+        mainList.add("버터플")
+        mainList.add("야도란")
+        mainList.add("피죤투")
+        mainList.add("또가스")
+
+
+
+//        mainList.forEach { Log.v("All", it) }
+
+        mainList.printAll()
+
+
+
+
+//        mainList.makeRecyclerView(main_chat_list, )
+
+
+        this.toast("간단하쥬?")
+
+//        Toast.makeText(this, "언제까지 이럴래", Toast.LENGTH_SHORT)
+//            .show()
+
+
+
+
+        main_user_name.myWatcher()
 
         //이게 메인(입장 방)
 //        main_next.setOnClickListener {
@@ -47,14 +82,11 @@ class ChatMainActivity : AppCompatActivity(), View.OnClickListener {
 //            Toast.makeText(this, "있음", Toast.LENGTH_SHORT).show()
 //        }
 
-        mainList.add("pikachu")
-        mainList.add("pichu")
-        mainList.add("raichu")
-        mainList.add("kkobugi")
-        mainList.add("butterfly")
-        mainList.add("yadoran")
-        mainList.add("pigeon")
-        mainList.add("ddogas")
+
+
+
+
+
 
 
         main_chat_list.visibility = View.GONE
@@ -62,6 +94,10 @@ class ChatMainActivity : AppCompatActivity(), View.OnClickListener {
 
 
         main_chat_name.addTextChangedListener(textWathcer)
+
+        main_chat_list.setOnClickListener {
+
+        }
 
         //setList()
 
@@ -127,7 +163,28 @@ class ChatMainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         Log.v("Main", v!!.toString())
-        when(v!!){
+
+
+        // [0, "209"], [0, "2091"], [1, "아몬드"], [2, "프레첼"], [0, "20912"]
+        //완료
+        // 착한 --> 원래 수정 전 배열, 수정 후 배열. 수정 전
+        // 수정 전(array1) : [id1, 이미지1, "이름1"], [id2, 이미지2, "이름2"],
+        // [id3, 이미지3, "이름3"], [id4, 이미지4, "이름4"]
+
+        // 수정 후(완료를 눌렀을 때, array2) : [id1, 이미지, "이름11"],
+        // [id3, 이미지3, "이름3"], [id4, 이미지4, "이름4"], [-1, "", "이름5"]
+        // add update delete
+
+        //0단계 --> 수정 전과 수정 후 중 더 긴 녀석 찾기
+        //update 배열 구성 1단계 --> id와 이름 쌍 비교
+        //2단계 --> 다른 걸 발견 --> update 배열에 추가
+
+
+
+        when(v){
+
+        }
+        when(v){
             v.findViewById<TextView>(R.id.ml_name)->{
                 val idx = main_chat_list.getChildAdapterPosition(v.parent as View)
                 main_chat_name.setText(main_chat_name.text.split("@")[0] + mainList[idx])

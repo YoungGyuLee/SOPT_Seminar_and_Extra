@@ -17,7 +17,10 @@ class MainAdapter(var mainList : ArrayList<String>) : RecyclerView.Adapter<MainV
 
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-        holder!!.mainName.text = mainList[position]
+        holder.mainName.text = mainList[position]
+        holder.mainName.setOnClickListener {
+
+        }
         Log.v("Main", "c")
 
     }

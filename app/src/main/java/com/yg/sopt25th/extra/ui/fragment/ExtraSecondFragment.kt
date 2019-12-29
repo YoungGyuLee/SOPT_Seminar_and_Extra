@@ -14,6 +14,13 @@ import kotlinx.android.synthetic.main.fragment_extra_second.*
 class ExtraSecondFragment : Fragment() {
     var number = 0
 
+    //아이디 : ㄹㅇㄹㅇㄹㅇㄹ
+    //비밀번호 : 12341234
+    //비밀번호 체크 : 12341234
+    //
+
+    //eidtTe
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

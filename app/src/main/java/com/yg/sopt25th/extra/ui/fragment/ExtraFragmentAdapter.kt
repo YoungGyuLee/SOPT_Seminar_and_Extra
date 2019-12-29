@@ -5,7 +5,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.PagerAdapter
 
-class ExtraFragmentAdapter(fm : FragmentManager) : FragmentStatePagerAdapter(fm) {
+class ExtraFragmentAdapter(fm : FragmentManager) : FragmentStatePagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
     private var fragments : ArrayList<Fragment> = ArrayList()
     override fun getItem(position: Int): Fragment  = fragments[position]
